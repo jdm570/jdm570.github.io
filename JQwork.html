@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/jQuery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" media="all and (orientation:portrait)" href="jqstyles.css">
+	<link rel="stylesheet" media="all and (orientation:landscape)" href="jqstyles.css">
+	
+	
+    
+</head>
+<body>
+
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <h1>You're Home!</h1>
+            <div data-role="navbar">
+                <ul>
+				
+				<li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left" data-transition="flip">Home</a></li>
+				<li><a href="#contact" class="ui-icon-carat-r ui-btn-icon-left" data-transition="flip">Contact</a></li>	
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="main" class="ui-content">
+		<center>
+            <p>Hello everyone!  This is Assignment 1<p>
+			<p> <h4><align="center">"Your time is limited, so don't waste it living someone else's life.
+									Don't be trapped by dogma - which is living with the results of other
+									people's thinking. Don't let the noise of other's opinions drown out your 
+									own inner voice.  And most important, have the courage to follow your heart
+									and intuition.  They somehow already know what you truly want to become. 
+									Everything else is secondary.  Stay Hungry.  Stay Foolish."  Steve Jobs<h4></p>
+		</center>	
+        </div>
+
+        <div data-role="footer">
+		
+		<center>		
+
+			<a href="mailto:jdm570@live.missouristate.edu" button class="ui-btn ui-icon-bars ui-btn-icon-left">School Email</a>
+			<a href="mailto:jonathandmorris65738@yahoo.com" button class="ui-btn ui-icon-star ui-btn-icon-left">Personal Email</a>
+			
+		</center>	
+			
+            
+        </div>
+    </div>
+
+    <div data-role="page" id="contact">
+        <div data-role="header">
+            <h1>Please Contact Us Here!</h1>
+            <div data-role="navbar"">
+                <ul>
+                    <li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left" data-transition="flip">Home</a></li>
+                    <li><a href="#contact" class="ui-btn ui-icon-carat-r ui-btn-icon-left" data-transition="flip">Contact</a></li>	
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="main" class="ui-content">
+		    <p> <h3 align="center"> The following form is from w3Schools and originally asked for date of birth instead of phone number.</h3></p>
+            <p><h3 align="center"> Your age is your business!  So, feel free to enter your phone number without being added to a call list!</h3> </p>
+		<form method="post" action="demoform.asp">
+  
+		<div class="ui-field-contain">
+			<label for="fullname">Full name:</label>
+				<input type="text" name="fullname" id="fullname"><br><br><br>
+
+			<label for="phone">Phone:</label>
+				<input type="phone" name="phone" id="phone"><br><br>
+
+			<label for="email">E-mail:</label>
+				<input type="email" name="email" id="email" >
+		</div>
+
+	</form>
+            
+    </div>
+	
+	<div data-role="footer">
+		
+		<center>		
+
+			<a href="mailto:jdm570@live.missouristate.edu" button class="ui-btn ui-icon-bars ui-btn-icon-left">School Email</a>
+			<a href="mailto:jonathandmorris65738@yahoo.com" button class="ui-btn ui-icon-star ui-btn-icon-left">Personal Email</a>
+		
+		<p> Thank you for your visit! </p>
+		
+		</center>	
+			
+        
+    </div>
+
+    <div data-role="page" id="jquery">
+        <div data-role="header">
+            <h1>jQuery Examples Page</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left" data-transition="flip">Home</a></li>
+                    <li><a href="#contact" class="ui-btn ui-icon-carat-r ui-btn-icon-left" data-transition="flip">Contact</a></li>	              
+                </ul>
+            </div>
+        </div>
+
+        
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
+	<script src="mobile/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+			$(window).on("orientationchange",function(){
+  if(window.orientation == 0) // Portrait
+  {
+    $("p").css({"background-color":"yellow","font-size":"300%"});
+  }
+  else // Landscape
+  {
+    $("p").css({"background-color":"red","font-size":"200%"});
+  }
+});
+	</script> 
+</body>
+</html>
