@@ -10,8 +10,10 @@
 		
 </head>
 <body>
-	<center><img class="img-responsive" style="padding:40px;" src="Mega.PNG" alt="some_text" style="width:width;height:height;"></center>
+<center>
+	<img class="img-responsive" style="padding:40px;" src="Mega.PNG" alt="some_text" style="width:width;height:height;">
 	
+		
 <form style="padding:10px;">
   <h4>Select Your Destination!</h4>
   <select ng-model="myDest">
@@ -22,7 +24,9 @@
 	<option value="Berlin, Germany">Berlin, Germany
 	<option value="Cancun, Mexico">Cancun, Mexico
   </select>
-  
+ </center>
+
+<center> 
 <div ng-switch="myDest">
   <div ng-switch-when="Brisbane, Australia">
      <h1>Brisbane, Australia</h1>
@@ -166,35 +170,42 @@
 	<br>
    </div>
 </div>
+</center>
 <br><br>
 
 
-<p class="lead">Contact Us!</p>
-    <div ng-controller="contactCtrl">
-        <form class="form-horizontal, well">
-            <div style="padding:10px;">
-                <label class="control-label col-xs-1">Name</label>
-                <input type="text" name="name" ng-model="newcontact.name" /><br />
-            </div>
-            <div style="padding:10px;">
-                <label class="control-label col-xs-1">Email</label>
-                <input type="text" name="email" ng-model="newcontact.email" /><br />
-            </div>
-            <div style="padding:10px;">
-                <label class="control-label col-xs-1">Phone</label>
-                <input type="text" name="phone" ng-model="newcontact.phone" /><br />
-            </div>
-			<div style="padding:10px;">
-			<p>Number of Guests</p><br>
-                <label class="control-label col-xs-1">Adults</label>
-                <input type="text" name="Adults" ng-model="newcontact.adults" /><br />
-            </div>
-			<div style="padding:10px;">
-                <label class="control-label col-xs-1">Children</label>
-                <input type="text" name="children" ng-model="newcontact.children" /><br />
-            </div>
+
 			
-	
+			
+  <h2>Contact Us!</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter First and Last Name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter primary email">
+    </div>
+	<div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="phone" class="form-control" id="phone" placeholder="Enter primary phone number">
+    </div>
+	<br>
+  <h2>Number of Guests</h2>
+    <div class="form-group">
+      <label for="adults">Adults:</label>
+      <input type="adults" class="form-control" id="adults" placeholder="Guests over the age of 16">
+    </div>
+	<div class="form-group">
+      <label for="children">Children:</label>
+      <input type="children" class="form-control" id="children" placeholder="Guests under the age of 16">
+    </div>
+    <br>
+  </form>
+</div>
+			
+<center>	
 <h3>Depart</h3>
 	<input type="date" id="myDepart" value="YYYY-MM-DD">
 			<p id="demo"></p>
@@ -203,7 +214,8 @@
 <h3>Return</h3>
 	<input type="date" id="myReturn" value="YYYY-MM-DD">
 			<p id="demo"></p>			
-
+</center>
+			
 		<script>
 			function myFunction() {
 				var x = document.getElementById("myDepart").value;
@@ -217,13 +229,14 @@
 				document.getElementById("demo").innerHTML = x;
 }
         </script>
-			
-            <div class="col-xs-offset-2">
+		<br>
+		<center>	
+            <div>
                 <input type="hidden" ng-model="newcontact.id" />
                 <input type="button" value="Submit" ng-click="saveContact()" class="btn btn-primary" />
 				<input type="reset" value="Reset" class="btn btn-primary" />
-				
-            </div>
+			</div>
+		</center>	
 </form>
         
     </div>
