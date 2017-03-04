@@ -4,255 +4,245 @@
   <title>Mega Travel</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize.css"></link>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-		
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+	
 </head>
-<body>
-<center>
-	<img class="img-responsive" style="padding:40px;" src="Mega.PNG" alt="some_text" style="width:width;height:height;">
-	
-		
-<form style="padding:10px;">
-  <h4>Select Your Destination!</h4>
-  <select ng-model="myDest">
-    <option value="">
-    <option value="Brisbane, Australia">Brisbane, Australia
-    <option value="Vancouver, Canada">Vancouver, Canada
-    <option value="New York City, USA">New York City, USA
-	<option value="Berlin, Germany">Berlin, Germany
-	<option value="Cancun, Mexico">Cancun, Mexico
-  </select>
- </center>
+	<body>
+		<center>
+			<img class="img-responsive" style="padding:40px;" src="Mega.PNG" alt="some_text" style="width:width;height:height;">
+			
+		<form style="padding:10px;">
+				<h4>Select Your Destination!</h4>
+					<select ng-model="user.myDest">
+						<option value="">
+						<option value="Brisbane, Australia">Brisbane, Australia
+						<option value="Vancouver, Canada">Vancouver, Canada
+						<option value="New York City, USA">New York City, USA
+						<option value="Berlin, Germany">Berlin, Germany
+						<option value="Cancun, Mexico">Cancun, Mexico
+					</select>
+		</center>
 
-<center> 
-<div ng-switch="myDest">
-  <div ng-switch-when="Brisbane, Australia">
-     <h1>Brisbane, Australia</h1>
-     <p>Please Select Your Activities</p>
+		<center> 
+			<div ng-switch="user.myDest">
+				<div ng-switch-when="Brisbane, Australia">
+					<h1>Brisbane, Australia</h1>
+					<p>Please Select Your Activities</p>
 	
-	<table>
-		<tr>
-			<th colspan=”2”></th>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="City Tours"></td>
-			<td>City Tours</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Sports"></td>
-			<td>Sports</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Cycling"></td>
-			<td>Cycling</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Museums"></td>
-			<td>Museums</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Boating"></td>
-			<td>Boating</td>
-		</tr>
-	</table>
-	 
-	<br>
-  </div>
-  <div ng-switch-when="Vancouver, Canada">
-     <h1>Vancouver, Canada</h1>
-     <p>Please Select Your Activities</p>
+			<table>
+				<tr>
+					<th colspan=”2”></th>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.CityTours"></td>
+					<td>City Tours</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Sports"></td>
+					<td>Sports</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Cycling"></td>
+					<td>Cycling</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Museums"></td>
+					<td>Museums</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Boating"></td>
+					<td>Boating</td>
+				</tr>
+			</table>
+			<br>
+			</div>
+			<div ng-switch-when="Vancouver, Canada">
+					<h1>Vancouver, Canada</h1>
+					<p>Please Select Your Activities</p>
 	
-	<table>
-		<tr>
-			<th colspan=”2”></th>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Museums"></td>
-			<td>Museums</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Sailing"></td>
-			<td>Sailing</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Beaches"></td>
-			<td>Beaches</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Hiking"></td>
-			<td>Hiking</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Boating"></td>
-			<td>Boating</td>
-		</tr>
-	</table>
+			<table>
+				<tr>
+					<th colspan=”2”></th>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Museums"></td>
+					<td>Museums</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Sailing"></td>
+					<td>Sailing</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Beaches"></td>
+					<td>Beaches</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Hiking"></td>
+					<td>Hiking</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Boating"></td>
+					<td>Boating</td>
+				</tr>
+			</table>
+			<br>
+		</div>
+			<div ng-switch-when="New York City, USA">
+					<h1>New York City, USA</h1>
+					<p>Please Select Your Activities</p>
 	 
-	<br>
-  </div>
-  <div ng-switch-when="New York City, USA">
-     <h1>New York City, USA</h1>
-     <p>Please Select Your Activities</p>
-	 <table>
-		<tr>
-			<th colspan=”2”></th>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Museums"></td>
-			<td>Museums</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Theatre"></td>
-			<td>Theatre</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Parks & Recreation"></td>
-			<td>Parks & Recreation</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="City Tours"></td>
-			<td>City Tours</td>
-		</tr>
-	</table>
-	 
-	<br>
-  </div>
-  <div ng-switch-when="Berlin, Germany">
-     <h1>Berlin, Germany</h1>
-     <p>Please Select Your Activities</p>
-	 <table>
-		<tr>
-			<th colspan=”2”></th>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="City Tours"></td>
-			<td>City Tours</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Museums"></td>
-			<td>Museums</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Cycling"></td>
-			<td>Cycling</td>
-		</tr>
-	 </table>
-
-	<br>	
-  </div>		
-  <div ng-switch-when="Cancun, Mexico">
-     <h1>Cancun, Mexico</h1>
-     <p>Please Select Your Activities</p>
-	 <table>
-		<tr>
-			<th colspan=”2”></th>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Parks & Recreation"></td>
-			<td>Parks & Recreation</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Beaches"></td>
-			<td>Beaches</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Boating"></td>
-			<td>Boating</td>
-		</tr>
-		<tr>
-			<td text-align="center"><input type="checkbox" ng-model="Snorkeling"></td>
-			<td>Snorkeling</td>
-		</tr>
-	</table>
-	
-	<br>
-   </div>
-</div>
-</center>
+			<table>
+				<tr>
+					<th colspan=”2”></th>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Museums"></td>
+					<td>Museums</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Theatre"></td>
+					<td>Theatre</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Parks&Recreation"></td>
+					<td>Parks & Recreation</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.CityTours"></td>
+					<td>City Tours</td>
+				</tr>
+			</table>
+			<br>
+		</div>
+			<div ng-switch-when="Berlin, Germany">
+				<h1>Berlin, Germany</h1>
+				<p>Please Select Your Activities</p>
+			<table>
+				<tr>
+					<th colspan=”2”></th>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.CityTours"></td>
+					<td>City Tours</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Museums"></td>
+					<td>Museums</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Cycling"></td>
+					<td>Cycling</td>
+				</tr>
+			</table>
+		  <br>	
+		</div>		
+			<div ng-switch-when="Cancun, Mexico">
+				<h1>Cancun, Mexico</h1>
+				<p>Please Select Your Activities</p>
+			<table>
+				<tr>
+					<th colspan=”2”></th>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Parks&Recreation"></td>
+					<td>Parks & Recreation</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Beaches"></td>
+					<td>Beaches</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Boating"></td>
+					<td>Boating</td>
+				</tr>
+				<tr>
+					<td text-align="center"><input type="checkbox" ng-model="user.Snorkeling"></td>
+					<td>Snorkeling</td>
+				</tr>
+			</table>
+		  <br>
+		</div>
+	</div>
+  </center>
 <br><br>
 
+<h2>Contact Us!</h2>
 
-
-			
-			
-  <h2>Contact Us!</h2>
-  <form>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="name" class="form-control" id="name" placeholder="Enter First and Last Name">
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter primary email">
-    </div>
-	<div class="form-group">
-      <label for="phone">Phone:</label>
-      <input type="phone" class="form-control" id="phone" placeholder="Enter primary phone number">
-    </div>
-	<br>
-  <h2>Number of Guests</h2>
-    <div class="form-group">
-      <label for="adults">Adults:</label>
-      <input type="adults" class="form-control" id="adults" placeholder="Guests over the age of 16">
-    </div>
-	<div class="form-group">
-      <label for="children">Children:</label>
-      <input type="children" class="form-control" id="children" placeholder="Guests under the age of 16">
-    </div>
-    <br>
-  </form>
-</div>
-			
-<center>	
-<h3>Depart</h3>
-	<input type="date" id="myDepart" value="YYYY-MM-DD">
-			<p id="demo"></p>
-			
-			
-<h3>Return</h3>
-	<input type="date" id="myReturn" value="YYYY-MM-DD">
-			<p id="demo"></p>			
-</center>
-			
-		<script>
-			function myFunction() {
-				var x = document.getElementById("myDepart").value;
-				document.getElementById("demo").innerHTML = x;
-}
-        </script>
-		
-		<script>
-			function myFunction() {
-				var x = document.getElementById("myReturn").value;
-				document.getElementById("demo").innerHTML = x;
-}
-        </script>
-		<br>
-		<center>	
-            <div>
-                <input type="hidden" ng-model="newcontact.id" />
-                <input type="button" value="Submit" ng-click="saveContact()" class="btn btn-primary" />
-				<input type="reset" value="Reset" class="btn btn-primary" />
+		<div ng-app="contactApp" ngcontroller="contactCtrl">
+		<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text"  name="name" ng-model="user.name" class="form-control" id="name" placeholder="Enter First and Last Name">
 			</div>
-		</center>	
-</form>
-        
-    </div>
+		<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="text" class="form-control" ng-model="user.email" id="email" placeholder="Enter primary email">
+			</div>
+		<div class="form-group">
+				<label for="phone">Phone:</label>
+				<input type="text" class="form-control" ng-model="user.phone" id="phone" placeholder="Enter primary phone number">
+			</div>
+		<br>
+<h2>Number of Guests</h2>
+		<div class="form-group">
+				<label for="adults">Adults:</label>
+				<input type="text" class="form-control" ng-model="user.adults" id="adults" placeholder="Guests over the age of 16">
+		</div>
+		<div class="form-group">
+				<label for="children">Children:</label>
+				<input type="text" class="form-control" ng-model="user.children" id="children" placeholder="Guests under the age of 16">
+		</div>
+<h2>Dates of Travel</h2>		
+		<div class="form-group">
+				<label for="depart">Depart:</label>
+				<input type="text" class="form-control" ng-model="user.depart" id="depart" placeholder="Date of departure">
+		</div>	
+		<div class="form-group">
+				<label for="return">Arrival:</label>
+				<input type="text" class="form-control" ng-model="user.arrival" id="arrival" placeholder="Date retuning home">
+		</div>
+		
+		<br><br><br>
 
-    
+	<center>	
+        <div>
+          
+                <input type="submit" ng-click="update (user)" value="Send" />
+				<input type="button" ng-click="reset()" value="Reset" />
+		</div>
+	</center>	
+    <p>form = {{user}}</p>
+ </form> 
+</div>
+   
+    	
+	<script>
+		//define the app
+		var app = angular.module ('contactApp', []);
+		
+		//here comes the controller
+		app.controller('contactCtrl', function($scope) {
+		
+		//Runs because it is in the main part of the controller
+			$scope.master = {myDest:"", CityTours:"", Sports:"", Cycling:"", Museums:"", Boating:"", Sailing:"", Beaches:"",
+							Hiking:"", Theatre:"", Parks&Recreation:"", Snorkeling:"", name:"", email:"", phone:"", adults:"",
+							children:"", depart:"", arrival:""};
+			
+		//Runs only when called
+			$scope.reset = function () {
+				$scope.user = angular.copy($scope.master);
+        };
+        $scope.reset();
+		});
+	</script>
+		
             </tbody>
         </table>
     </div>
-	<div class="container>
+<div class="container">
 	<br>
-  
-  </form>
 </div>
-
-
-
-
 </body>
 </html>
